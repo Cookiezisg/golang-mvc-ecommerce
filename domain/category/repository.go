@@ -59,7 +59,6 @@ func (r *Repository) GetByName(name string) []Category {
 // 批量创建商品分类
 func (r *Repository) BulkCreate(categories []*Category) (int, error) {
 	var count int64
-
 	err := r.db.Create(&categories).Count(&count).Error
 	return int(count), err
 }
