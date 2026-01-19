@@ -68,7 +68,6 @@ func (c *Controller) Login(g *gin.Context) {
 	var req LoginRequest
 	if err := g.ShouldBind(&req); err != nil {
 		api_helper.HandleError(g, api_helper.ErrInvalidBody)
-
 	}
 	currentUser, err := c.userService.GetUser(req.Username, req.Password)
 	if err != nil {
@@ -98,7 +97,7 @@ func (c *Controller) Login(g *gin.Context) {
 	}
 
 	g.JSON(
-		http.StatusOK, LoginResponse{Username: currentUser.Username, UserId: currentUser.ID, Token: currentUser.Token})
+		http.StatusOK, LoginResponse{Username: currentUser.Username, UserID: currentUser.ID, Token: currentUser.Token})
 }
 
 // 验证token
