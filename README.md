@@ -1,4 +1,4 @@
-# golang-mvc-ecommerce
+# Gin Mart
 
 [![Go Version](https://img.shields.io/badge/Go-1.25.5-00ADD8?logo=go&logoColor=white)](#)
 [![Framework](https://img.shields.io/badge/Gin-HTTP%20Framework-00ADD8?logo=go&logoColor=white)](#)
